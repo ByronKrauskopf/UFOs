@@ -19,24 +19,43 @@ function buildTable(data) {
             }
         );
     });
-};
+}
 
-//function for date filtering
+// //function for date filtering
+// function handleClick() {
+//     //obtain datetime value form the filter
+//     let date = d3.select('#datetime').property('value');
+//     let filteredData = tableData;
+//     //filter using date if value entered in filter
+//     if (date) {
+//         //apply filter to table data and retain only rows where data matches filter value
+//         filteredData = filteredData.filter(row => row.datetime === date);
+//     };
+//     //rebuild table with filtered values
+//     buildTable(filteredData);
+// }
+
 function handleClick() {
-    //obtain datetime value form the filter
-    let date = d3.select('#datetime').property('value');
+    // Grab the datetime value from the filter
+    let date = d3.select("#datetime").property("value");
     let filteredData = tableData;
-    //filter using date if value entered in filter
+  
+     // Check to see if a date was entered and filter the
+    // data using that date.
     if (date) {
-        //apply filter to table data and retin only rows where data matches filter value
-        filteredData = filteredData.filter(row => row.datetime === date);
-    };
-    //rebuild table with filtered values
+      // Apply `filter` to the table data to only keep the
+      // rows where the `datetime` value matches the filter value
+      filteredData = filteredData.filter(row => row.datetime === date);
+    }
+  
+     // Rebuild the table using the filtered data
+    // @NOTE: If no date was entered, then filteredData will
+    // just be the original tableData.
     buildTable(filteredData);
-};
+  }
 
 //event to listen for the form button
 d3.selectAll('#filter-btn').on('click', handleClick);
 
 //build table when page loads
-buildTable(tabledata);
+buildTable(tableData);
