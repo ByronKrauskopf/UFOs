@@ -15,17 +15,17 @@
 
 </head>
 
-<body>
+<body class='bg-dark'>
     <div class='wrapper'>
-        <!--Crate navbar that will reset page-->
-        <nav class='navbar navbar-expand-lg'>
+        <!--Navbar-->
+        <nav class='navbar navbar-dark bg-dark navbar-expand-lg'>
             <a class='navbar-brand' href='index.html'>UFO Sightings</a>
         </nav>
     </div>
     
     <!--jumbotron header-->
     <div class='jumbotron'>
-        <h1>The Truth Is Out There</h1>
+        <h1 class='display-4'>The Truth Is Out There</h1>
     </div>
     
     <!--Article title and body-->
@@ -49,17 +49,17 @@
         <div class='row'>
             <!--Filters-->
             <div class='col-md-3'>
-                <form>
+                <form class='bg-dark'>
                     <p>Filter Search</p>
-                    <ul class='list-group'>
+                    <ul class='list-group bg-dark'>
                         <!--Date filter-->
-                        <li class='list-group-item'>
+                        <li class='list-group-item bg-dark'>
                             <label for="date">Enter Date</label>
                             <input type='text' placeholder='1/10/2010' id='datetime' />
                         </li>
                         <!--Filter button-->
-                        <li class='list-group-item'>
-                            <button id='filter-btn' type='button' class='btn btn-default'>Filter Table</button>
+                        <li class='list-group-item bg-dark text-center'>
+                            <button id='filter-btn' type='button' class='btn btn-dark'>Filter Table</button>
                         </li>
                     </ul>
                 </form>
