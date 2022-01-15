@@ -16,14 +16,14 @@
 </head>
 
 <body class='bg-dark'>
+    <!--Navbar-->
     <div class='wrapper'>
-        <!--Navbar-->
         <nav class='navbar navbar-dark bg-dark navbar-expand-lg'>
             <a class='navbar-brand' href='index.html'>UFO Sightings</a>
         </nav>
     </div>
     
-    <!--jumbotron header-->
+    <!--Jumbotron header-->
     <div class='jumbotron'>
         <h1 class='display-4'>The Truth Is Out There</h1>
     </div>
@@ -44,7 +44,7 @@
         </div>
     </div>
     
-    <!--Filters and table-->
+    <!--Filters and table display-->
     <div class='container-fluid'>
         <div class='row'>
             <!--Filters-->
@@ -57,10 +57,26 @@
                             <label for="date">Enter Date</label>
                             <input type='text' placeholder='1/10/2010' id='datetime' />
                         </li>
-                        <!--Filter button-->
-                        <li class='list-group-item bg-dark text-center'>
-                            <button id='filter-btn' type='button' class='btn btn-dark'>Filter Table</button>
+                        <!--City filter-->
+                        <li class='list-group-item bg-dark'>
+                            <label for="city">Enter City</label>
+                            <input type='text' placeholder='benton' id='city'>
                         </li>
+                        <!--State filter-->
+                        <li class='list-group-item bg-dark'>
+                            <label for="state">Enter State</label>
+                            <input type='text' placeholder='ar' id='state'>
+                        </li>
+                        <!--Country filter-->
+                        <li class='list-group-item bg-dark'>
+                            <label for="country">Enter Country</label>
+                            <input type='text' placeholder='us' id='country'>
+                        </li>
+                        <!--Shape filter-->
+                        <li class='list-group-item bg-dark'>
+                            <label for="shape">Enter Shape</label>
+                            <input type='text' placeholder='circle' id='shape'>
+                        </li>                        
                     </ul>
                 </form>
             </div>
@@ -84,7 +100,7 @@
         </div>
     </div>
     
-    <!--scripts-->
+    <!--Scripts-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
     <script src="static/js/data.js"></script>
     <script src="static/js/app.js"></script>    
